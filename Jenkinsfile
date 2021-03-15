@@ -10,7 +10,7 @@ node('master')
     }
     stage('ContinuousDeployment')
     {
-     sh 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war ubuntu@ 172.31.1.245:/var/lib/tomcat9/webapps/qaapp.war'  
+     sh 'scp /home/ubuntu/.jenkins/workspace/Pipeline_SCM/webapp/target/webapp.war ubuntu@ 172.31.1.245:/var/lib/tomcat9/webapps/qaapp.war'  
 	            
 		 
     }
@@ -23,7 +23,7 @@ node('master')
     }
     stage('ContinuousDelivery')
     {
-        sh 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war ubuntu@172.31.5.169:/var/lib/tomcat9/webapps/prodapp.war'   
+        sh 'scp /home/ubuntu/.jenkins/workspace/Pipeline_SCM/webapp/target/webapp.war ubuntu@172.31.5.169:/var/lib/tomcat9/webapps/prodapp.war'   
     }
     
 }
